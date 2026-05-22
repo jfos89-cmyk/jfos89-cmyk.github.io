@@ -8,24 +8,24 @@ export default function Navigation() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+    <nav className="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-200 overflow-x-hidden">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20 min-w-0">
           {/* Logo */}
-          <a href="/" className="flex items-center flex-shrink-0">
+          <a href="/" className="flex items-center flex-shrink-0 min-w-0">
             <img
               src="/manus-storage/QRALogo_24986d40.jpeg"
               alt="QRA Strategies LLC"
-              className="h-14 w-auto"
+              className="max-w-[200px] h-auto max-h-16 object-contain"
             />
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-2">
-            <a href="/" className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md transition-colors duration-200">
+          <div className="hidden md:flex items-center gap-2 flex-shrink-0">
+            <a href="/" className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md transition-colors duration-200 whitespace-nowrap">
               Home
             </a>
-            <a href="/contact" className="px-4 py-2 text-sm font-medium text-white bg-blue-900 hover:bg-blue-800 rounded-md transition-colors duration-200">
+            <a href="/contact" className="px-4 py-2 text-sm font-medium text-white bg-blue-900 hover:bg-blue-800 rounded-md transition-colors duration-200 whitespace-nowrap">
               Get in Touch
             </a>
           </div>
@@ -43,12 +43,12 @@ export default function Navigation() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 space-y-1">
-            <a href="/" onClick={closeMenu} className="block px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md transition-colors">
+        <div className="md:hidden bg-white border-t border-gray-200 overflow-x-hidden">
+          <div className="w-full px-4 sm:px-6 lg:px-8 py-3 space-y-1">
+            <a href="/" onClick={closeMenu} className="block px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md transition-colors whitespace-nowrap">
               Home
             </a>
-            <a href="/contact" onClick={closeMenu} className="block px-4 py-2 text-sm font-medium text-white bg-blue-900 hover:bg-blue-800 rounded-md transition-colors">
+            <a href="/contact" onClick={closeMenu} className="block px-4 py-2 text-sm font-medium text-white bg-blue-900 hover:bg-blue-800 rounded-md transition-colors whitespace-nowrap">
               Get in Touch
             </a>
           </div>

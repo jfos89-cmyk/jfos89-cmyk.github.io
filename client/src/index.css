@@ -116,17 +116,30 @@
   html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    width: 100%;
   }
   * {
     border-color: var(--border);
     outline-color: var(--ring);
     outline-offset: 2px;
+    box-sizing: border-box;
   }
   body {
     background-color: var(--background);
     color: var(--foreground);
     font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  main {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  section {
+    width: 100%;
     overflow-x: hidden;
   }
   h1, h2, h3, h4, h5, h6 {
@@ -253,5 +266,20 @@
   
   nav a {
     transition: all 0.2s ease-out;
+  }
+  nav img {
+    max-width: 220px;
+    height: auto;
+    display: block;
+  }
+  footer img {
+    max-width: 220px;
+    height: auto;
+    display: block;
+  }
+  p, span, div, li {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 }
