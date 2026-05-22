@@ -142,7 +142,7 @@ export default function Services() {
             <p className="text-lg mb-8 text-blue-100 max-w-2xl mx-auto leading-relaxed">
               Contact us today to discuss your Quality and Regulatory Affairs needs.
             </p>
-            <a href="/contact" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold px-8 py-4 rounded-lg transition-colors duration-200">
+            <a href="/contact" className="button-primary inline-block">
               Schedule a Consultation
             </a>
           </div>

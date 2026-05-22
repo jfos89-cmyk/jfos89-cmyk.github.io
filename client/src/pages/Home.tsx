@@ -18,7 +18,7 @@ export default function Home() {
               <p className="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
                 Connecting Groundbreaking Medical Engineering with Complex Compliance Landscapes
               </p>
-              <a href="/contact" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold px-8 py-4 rounded-lg transition-colors duration-200">
+              <a href="/contact" className="button-primary inline-block">
                 Schedule a Consultation
               </a>
             </div>
@@ -121,7 +121,7 @@ export default function Home() {
             <p className="text-lg mb-8 text-blue-100 max-w-2xl mx-auto leading-relaxed">
               Let us help you establish a Quality Management System that protects your business and accelerates your market entry.
             </p>
-            <a href="/contact" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold px-8 py-4 rounded-lg transition-colors duration-200">
+            <a href="/contact" className="button-primary inline-block">
               Schedule a Consultation
             </a>
           </div>
