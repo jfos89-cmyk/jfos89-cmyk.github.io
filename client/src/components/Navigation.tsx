@@ -8,47 +8,40 @@ export default function Navigation() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-200 overflow-x-hidden">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 min-w-0">
-          {/* Logo */}
-          <a href="/" className="flex items-center flex-shrink-0 min-w-0">
-            <img
-              src="/manus-storage/QRALogo_24986d40.jpeg"
-              alt="QRA Strategies LLC"
-              className="max-w-[200px] h-auto max-h-16 object-contain"
-            />
-          </a>
+    <nav>
+      <div className="nav-container">
+        {/* Logo */}
+        <a href="/" className="logo">
+          <img
+            src="/manus-storage/QRALogo_24986d40.jpeg"
+            alt="QRA Strategies LLC"
+          />
+        </a>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-2 flex-shrink-0">
-            <a href="/" className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md transition-colors duration-200 whitespace-nowrap">
-              Home
-            </a>
-            <a href="/contact" className="px-4 py-2 text-sm font-medium text-white bg-blue-900 hover:bg-blue-800 rounded-md transition-colors duration-200 whitespace-nowrap">
-              Get in Touch
-            </a>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="md:hidden p-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+        {/* Desktop Navigation */}
+        <div className="nav-links">
+          <a href="/">Home</a>
+          <a href="/contact">Get in Touch</a>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={toggleMenu}
+          className="mobile-menu-btn"
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200 overflow-x-hidden">
-          <div className="w-full px-4 sm:px-6 lg:px-8 py-3 space-y-1">
-            <a href="/" onClick={closeMenu} className="block px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md transition-colors whitespace-nowrap">
+        <div className="mobile-menu open">
+          <div className="mobile-menu-content">
+            <a href="/" onClick={closeMenu}>
               Home
             </a>
-            <a href="/contact" onClick={closeMenu} className="block px-4 py-2 text-sm font-medium text-white bg-blue-900 hover:bg-blue-800 rounded-md transition-colors whitespace-nowrap">
+            <a href="/contact" onClick={closeMenu}>
               Get in Touch
             </a>
           </div>
