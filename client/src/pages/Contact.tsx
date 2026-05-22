@@ -110,9 +110,9 @@ export default function Contact() {
             {/* Contact Form */}
             <div className="max-w-2xl mx-auto">
               <div className="mb-12">
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  We are here to help you navigate the complexity of Quality and Regulatory Affairs. Whether you are just starting your compliance journey or looking to optimize your existing systems, we would love to discuss how we can support your organization. Fill out the form below and we will be in touch shortly to schedule a consultation.
-                </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Send us a direct message to schedule an initial compliance assessment. We will discuss your specific requirements, regulatory landscape, and build a roadmap to safely accelerate your path to market entry.
+              </p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
