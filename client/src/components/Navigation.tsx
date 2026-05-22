@@ -13,7 +13,7 @@ export default function Navigation() {
         {/* Logo */}
         <a href="/" className="logo">
           <img
-            src="/manus-storage/QRALogo_24986d40.jpeg"
+            src="/QRALogo.jpeg"
             alt="QRA Strategies LLC: Quality Management System Buildout, Regulatory Compliance, and Submissions"
           />
         </a>
