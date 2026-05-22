@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="footer-section" style={{ textAlign: 'center', marginBottom: '2rem' }}>
             <img
               src="/manus-storage/QRALogo_24986d40.jpeg"
-              alt="QRA Strategies LLC"
+              alt="QRA Strategies LLC: Precision Regulatory Execution and Quality Management System Buildout"
               style={{ maxWidth: '200px', height: 'auto', maxHeight: '64px', objectFit: 'contain', margin: '0 auto 1rem' }}
             />
           </div>

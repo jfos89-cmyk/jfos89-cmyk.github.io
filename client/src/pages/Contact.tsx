@@ -69,7 +69,7 @@ export default function Contact() {
               Email
             </p>
             <p style={{ fontSize: '1.125rem', marginBottom: '0' }}>
-              <a href="mailto:genevieve@qrastrategies.com" style={{ color: '#0B2341', fontWeight: '600' }}>
+              <a href="mailto:genevieve@qrastrategies.com" style={{ color: '#CBA052', fontWeight: '600' }}>
                 genevieve@qrastrategies.com
               </a>
             </p>
@@ -79,6 +79,10 @@ export default function Contact() {
         {/* Contact Form */}
         <section className="bg-white" style={{ paddingTop: '1.5rem', paddingBottom: '1.5rem' }}>
           <div className="section-container">
+            <h2 style={{ fontSize: '1.5rem', fontWeight: '700', color: '#0B2341', marginBottom: '1.5rem', textAlign: 'center' }}>
+              Send us a Message
+            </h2>
+            
             <form onSubmit={handleSubmit}>
               {submitMessage && (
                 <div className={`form-message ${submitMessage.includes('error') ? 'error' : 'success'}`}>
@@ -95,6 +99,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  aria-label="Full name"
                 />
               </div>
 
@@ -107,6 +112,7 @@ export default function Contact() {
                   value={formData.company}
                   onChange={handleChange}
                   required
+                  aria-label="Company name"
                 />
               </div>
 
@@ -119,6 +125,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  aria-label="Work email address"
                 />
               </div>
 
@@ -130,7 +137,9 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                />
+                  rows={5}
+                  aria-label="Your message"
+                ></textarea>
               </div>
 
               <button
@@ -142,6 +151,17 @@ export default function Contact() {
                 {!isSubmitting && <ArrowRight size={20} />}
               </button>
             </form>
+
+            {/* Service Schema Markup */}
+            <script type="application/ld+json">
+              {JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "ContactPoint",
+                "contactType": "Customer Service",
+                "email": "genevieve@qrastrategies.com",
+                "availableLanguage": "en"
+              })}
+            </script>
           </div>
         </section>
       </main>

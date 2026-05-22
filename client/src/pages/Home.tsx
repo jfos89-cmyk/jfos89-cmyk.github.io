@@ -144,6 +144,22 @@ export default function Home() {
                 </ul>
               </div>
             </div>
+
+            {/* Service Schema Markup */}
+            <script type="application/ld+json">
+              {JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Service",
+                "name": "Quality Management System Buildout and Regulatory Compliance",
+                "description": "Comprehensive QMS build out, regulatory pathway selection, and submission execution for medical device companies",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "QRA Strategies LLC"
+                },
+                "areaServed": "US",
+                "serviceType": "Medical Device Regulatory Consulting"
+              })}
+            </script>
           </div>
         </section>
 
@@ -202,17 +218,17 @@ export default function Home() {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
+                  rows={5}
                   required
-                />
+                ></textarea>
               </div>
 
               <button
                 type="submit"
-                disabled={isSubmitting}
                 className="btn btn-primary"
+                disabled={isSubmitting}
               >
-                {isSubmitting ? 'Sending...' : 'Schedule Assessment'}
-                {!isSubmitting && <ArrowRight size={20} />}
+                {isSubmitting ? 'Submitting...' : 'Send Inquiry'}
               </button>
             </form>
           </div>
