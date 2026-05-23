@@ -1,10 +1,10 @@
 import NotFound from "@/pages/NotFound";
-import { Route, Router as WouterRouter, Switch } from "wouter";
+import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 
-function Routes() {
+function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
@@ -19,9 +19,7 @@ function Routes() {
 function App() {
   return (
     <ErrorBoundary>
-      <WouterRouter base="/qra-strategies-web">
-        <Routes />
-      </WouterRouter>
+      <Router />
     </ErrorBoundary>
   );
 }
