@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>QRA Strategies</title>
+  <script>
+    // GitHub Pages SPA redirect trick
+    // Stores the path in sessionStorage and redirects to the root
+    var path = window.location.pathname;
+    sessionStorage.setItem('redirect', window.location.href);
+    window.location.replace(window.location.origin + '/');
+  </script>
+</head>
+<body></body>
+</html>

@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -14,7 +13,6 @@
     <meta property="og:description" content="Precision execution and regulatory strategy for MedTech innovation." />
     <meta property="og:type" content="website" />
     <title>QRA Strategies: Medical Device Regulatory Consulting</title>
-    
     <!-- Organization Schema Markup -->
     <script type="application/ld+json">
     {
@@ -37,15 +35,19 @@
       ]
     }
     </script>
+    <!-- SPA redirect restoration for GitHub Pages -->
+    <script>
+      (function(){
+        var r = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (r && r !== location.href) {
+          history.replaceState(null, null, r);
+        }
+      })();
+    </script>
   </head>
-
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
   </body>
-
 </html>

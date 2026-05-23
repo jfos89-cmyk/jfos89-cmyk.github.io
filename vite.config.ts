@@ -4,7 +4,7 @@ import path from "node:path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: '/',
+  base: "/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
@@ -19,6 +19,5 @@ export default defineConfig({
   },
   server: {
     host: true,
-    allowedHosts: ['5173-ic00s61eqdourb92f3kzn-d829c686.us2.manus.computer'],
   },
 });
